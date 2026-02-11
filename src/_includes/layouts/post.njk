@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+---
+<article class="post">
+  <header class="post-header">
+    <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="post-description">{{ description }}</p>{% endif %}
+    {% if tags %}
+    <div class="tag-list">
+      {% for tag in tags %}
+        {% if tag !== "posts" %}
+        <a href="/tags/{{ tag | slugify }}/" class="tag-pill">{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+  {% if image %}
+  <img class="post-hero" src="/posts/images/{{ image }}" alt="{{ title }}" loading="lazy">
+  {% endif %}
+  <div class="prose">
+    {{ content | safe }}
+  </div>
+</article>

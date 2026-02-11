@@ -1,0 +1,21 @@
+<a href="{{ post.url }}" class="post-card">
+  {% if post.data.image %}
+  <div class="post-card-image">
+    <img src="/posts/images/{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy">
+  </div>
+  {% endif %}
+  <div class="post-card-body">
+    <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+    <h2>{{ post.data.title }}</h2>
+    {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+    {% if post.data.tags %}
+    <div class="tag-list">
+      {% for tag in post.data.tags %}
+        {% if tag !== "posts" %}
+        <span class="tag-pill">{{ tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</a>

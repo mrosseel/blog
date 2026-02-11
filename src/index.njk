@@ -1,0 +1,9 @@
+---
+layout: layouts/base.njk
+title: ""
+---
+<div class="post-grid">
+  {% for post in collections.posts %}
+    {% include "partials/post-card.njk" %}
+  {% endfor %}
+</div>
