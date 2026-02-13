@@ -5,8 +5,8 @@
   </div>
   {% endif %}
   <div class="post-card-body">
-    <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
-    <h2>{{ post.data.title }}</h2>
+    <span class="post-card-date">{{ post.date | isoDate | replace("T00:00:00.000Z", "") }}</span>
+    <h2 class="post-card-title">{{ post.data.title }} <span class="arrow">&#8599;</span></h2>
     {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
     {% if post.data.tags %}
     <div class="tag-list">
