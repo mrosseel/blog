@@ -8,6 +8,8 @@ layout: layouts/post.njk
 
 This is the first post. The blog is built with [Eleventy](https://www.11ty.dev/), authored in Obsidian, and deployed as static files.
 
+Older blog posts have also been ported so it doesn't start out emtpy!
+
 ## Code test
 
 ```javascript
