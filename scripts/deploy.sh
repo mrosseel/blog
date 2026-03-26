@@ -8,6 +8,9 @@ cd "$BLOG_DIR"
 echo "==> Syncing from Obsidian..."
 bash scripts/sync-obsidian.sh
 
+echo "==> Checking SEO frontmatter..."
+bash scripts/seo-frontmatter.sh
+
 echo "==> Building site..."
 npx @11ty/eleventy
 

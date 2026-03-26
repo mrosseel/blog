@@ -3,6 +3,7 @@ title: "I'm moving, cloudwatch.net downtime"
 date: 2008-07-01
 tags: [cloudwatch, moving]
 description: "Moving house, cloudwatch.net downtime, and plans for a low-power webcam hosting solution."
+layout: layouts/post.njk
 ---
 
 Practical announcement: I'm moving on friday the 4th of july. This means some cloudwatch.net downtime! Minimal downtime is from 08:00 UT on 04/07/2008 to 15:00 UT on 04/07/2008. This is presuming the internet connection switch goes as expected. I would not be surprised to be out the entire weekend.

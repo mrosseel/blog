@@ -1,8 +1,11 @@
 {
   "title": "blog.miker.be",
   "url": "https://blog.miker.be",
-  "description": "Mike's blog",
+  "description": "Mike's blog about technology, NixOS, astronomy, and software development",
+  "language": "en",
   "author": {
-    "name": "Mike"
-  }
+    "name": "Mike",
+    "url": "https://blog.miker.be"
+  },
+  "defaultImage": "/assets/img/og-default.png"
 }

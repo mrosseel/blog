@@ -3,6 +3,7 @@ title: "Mobile Cloudwatch"
 date: 2008-10-12
 tags: [android, cloudwatch]
 description: "A fully working Android app for cloudwatch.net cloud alerts."
+layout: layouts/post.njk
 ---
 
 ![Mobile Cloudwatch Android app](/posts/images/mobile-cloudwatch.png)

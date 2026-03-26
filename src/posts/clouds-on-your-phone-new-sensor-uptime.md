@@ -3,6 +3,7 @@ title: "Clouds on your phone, new sensor, uptime"
 date: 2008-09-05
 tags: [android, cloudwatch]
 description: "Android app development for cloudwatch.net, the new AAG Cloudwatcher sensor, and uptime woes."
+layout: layouts/post.njk
 ---
 
 Just an update on cloudwatch.net uptime: the hosting is back at my place but now we're renovating which does bad things to the fulltime availability of electricity. And did I mention the telephone cable was ruptured (so no ADSL for a few hours)? Nonetheless I expect the worst to be over.

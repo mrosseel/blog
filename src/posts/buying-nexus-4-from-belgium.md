@@ -3,6 +3,7 @@ title: "Buying the Nexus 4 (or Nexus 10 or Chromebook) from Belgium"
 date: 2013-08-29
 tags: [android]
 description: "How to order a Nexus 4 from the Google Play Store while living in Belgium."
+layout: layouts/post.njk
 ---
 
 Although I don't read *every* cellphone comparison, it's clear the LG Nexus 4 offers great value for money, moreso because it just got discounted 100 dollar (and consequently 100 euro as well, at least the funny currency conversion works in our advantage for once). Of course being in Belgium, you can't buy these devices from the Google play store. You can buy them from mediamarkt (who add 100 euro on top of the price just for fun), from ebay (the price drop hasn't been reflected in the prices yet) or you can insist on ordering it in the Play store. One way to do this is to pretend your internet connection is in Germany, your address is in Germany and your credit card is in Germany. Sounds difficult, but it's just a bit tedious, that's all :)

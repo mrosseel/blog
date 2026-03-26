@@ -3,6 +3,7 @@ title: "Sound in the Android emulator"
 date: 2008-09-20
 tags: [android]
 description: "Getting sound to work in the Android emulator on Linux with OSS audio."
+layout: layouts/post.njk
 ---
 
 The Android application I'm developing needs sound, unfortunately I couldn't get sound to work!

@@ -1,0 +1,77 @@
+{# Canonical URL #}
+{% set canonicalUrl = metadata.url + page.url %}
+<link rel="canonical" href="{{ canonicalUrl }}">
+
+{# Open Graph #}
+<meta property="og:type" content="{% if layout == 'layouts/post.njk' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ title or metadata.title }}">
+<meta property="og:description" content="{{ description or metadata.description }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:site_name" content="{{ metadata.title }}">
+<meta property="og:locale" content="en_US">
+{% if image %}
+<meta property="og:image" content="{{ metadata.url }}/posts/images/{{ image }}">
+{% else %}
+<meta property="og:image" content="{{ metadata.url }}{{ metadata.defaultImage }}">
+{% endif %}
+{% if layout == 'layouts/post.njk' %}
+<meta property="article:published_time" content="{{ date | isoDate }}">
+<meta property="article:author" content="{{ metadata.author.name }}">
+{% for tag in tags %}{% if tag !== "posts" %}
+<meta property="article:tag" content="{{ tag }}">
+{% endif %}{% endfor %}
+{% endif %}
+
+{# Twitter Card #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title or metadata.title }}">
+<meta name="twitter:description" content="{{ description or metadata.description }}">
+{% if image %}
+<meta name="twitter:image" content="{{ metadata.url }}/posts/images/{{ image }}">
+{% else %}
+<meta name="twitter:image" content="{{ metadata.url }}{{ metadata.defaultImage }}">
+{% endif %}
+
+{# JSON-LD Structured Data #}
+{% if layout == 'layouts/post.njk' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ description or '' }}",
+  "datePublished": "{{ date | isoDate }}",
+  "url": "{{ canonicalUrl }}",
+  {% if image %}"image": "{{ metadata.url }}/posts/images/{{ image }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ canonicalUrl }}"
+  }
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ metadata.title }}",
+  "description": "{{ metadata.description }}",
+  "url": "{{ metadata.url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ metadata.author.name }}",
+    "url": "{{ metadata.author.url }}"
+  }
+}
+</script>
+{% endif %}
