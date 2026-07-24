@@ -92,8 +92,8 @@ everything below is tested against. Dotted words show an explanation when you ho
 <table>
 <thead><tr><th>Camera</th><th>Type</th><th>Sees infrared?</th><th>Glow reference</th><th>Airglow fix</th><th>Star check</th></tr></thead>
 <tbody>
-<tr><td>imx462 (“mr2”)</td><td>colour</td><td>yes — no <span class="term" tabindex="0" data-tip="A filter that blocks infrared light. The HQ camera has one built in, and the SQM-L's own filter behaves much the same — so both see the sky through nearly the same window.">IR filter</span></td><td><span class="term" tabindex="0" data-tip="A strip of pixels on the sensor that is covered so no light reaches it — it measures the camera's own glow fresh in every frame. Technically: optical black.">shielded pixels</span>, every frame</td><td>needed — calibrated</td><td>yes</td></tr>
-<tr><td>HQ / imx477 (“mr”)</td><td>colour</td><td>no — IR filter built in</td><td>factory value + self-learning</td><td>barely needed</td><td>yes</td></tr>
+<tr><td>imx462</td><td>colour</td><td>yes — no <span class="term" tabindex="0" data-tip="A filter that blocks infrared light. The HQ camera has one built in, and the SQM-L's own filter behaves much the same — so both see the sky through nearly the same window.">IR filter</span></td><td><span class="term" tabindex="0" data-tip="A strip of pixels on the sensor that is covered so no light reaches it — it measures the camera's own glow fresh in every frame. Technically: optical black.">shielded pixels</span>, every frame</td><td>needed — calibrated</td><td>yes</td></tr>
+<tr><td>HQ / imx477</td><td>colour</td><td>no — IR filter built in</td><td>factory value + self-learning</td><td>barely needed</td><td>yes</td></tr>
 <tr><td>imx296</td><td>mono</td><td>partially</td><td>factory value + self-learning</td><td>impossible — needs colour</td><td>yes</td></tr>
 </tbody>
 </table>
